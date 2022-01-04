@@ -11,9 +11,10 @@
 
 let liste = document.getElementsByTagName('div')[2] 
 console.log(liste.firstElementChild); 
-console.log(liste.lastElementChild);    
-let text = document.getElementsByTagName('i')[0] 
-console.log(text.innerText);  
-console.log(text.parentElement); 
-let text2 = document.getElementsByTagName('b')[0] 
-console.log(text2.innerText);  console.log(text2.parentElement);   console.log(liste.firstElementChild.nextElementSibling.innerText);
+console.log(liste.lastElementChild);
+console.log(liste.lastElementChild.previousElementSibling.children[0]);
+console.log(liste.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild);
+console.log(liste.lastElementChild.previousElementSibling.children[0].parentElement);
+console.log(liste.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.parentElement);
+console.log(liste.firstElementChild.nextElementSibling); 
+
