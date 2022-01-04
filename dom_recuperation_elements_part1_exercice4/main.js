@@ -19,3 +19,8 @@ let li2 = Array.from(lastLi)
 li2.forEach (element => {
     console.log(element.innerText.toUpperCase());
 })
+
+//OU
+
+let exo4 = document.getElementsByTagName("li");
+[...exo4].forEach(element => console.log(element.textContent.toUpperCase()));
