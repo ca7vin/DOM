@@ -1,0 +1,43 @@
+.container{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+#bigTitle{
+    font-size: 60px;
+    text-align: center;
+    text-decoration: underline;
+    color: tomato;
+}
+.title{
+    color: rgb(73, 37, 97);
+}
+
+.important{
+    color: rgb(235, 126, 2);
+}
+
+.success{
+    color:green;
+}
+
+.border-black{
+    border: 3px solid rgb(31, 31, 31);
+}
+
+.margin-top{
+    margin-top: 50px;
+}
+.margin-bottom{
+    margin-bottom: 50px;
+}
+
+.text{
+    color: teal;
+    font-style: italic;
+}
+
+.padding{
+    padding: 10px;
+}
+
