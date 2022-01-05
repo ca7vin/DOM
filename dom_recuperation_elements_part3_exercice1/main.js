@@ -16,6 +16,7 @@ console.log(exo3);
 // ### 4. Récupère la première section et trouve le moyen d'affiche juste le nom de l'id dans la console
 let exo4 = document.querySelector('section')
 console.log(exo4.id);
+console.log(exo4.getAttribute('id'));
 // ### 5. Récupère le premier h1 et trouve le moyen d'afficher juste le nom de la class dans la console ( attention il existe deux propriétés pour afficher les class, fait l'exercice avec l'une et puis avec l'autre !)
 let exo5 = document.querySelector("h1")
 console.log(exo5.className);

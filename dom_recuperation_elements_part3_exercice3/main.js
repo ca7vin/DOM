@@ -14,8 +14,8 @@ let exo1H1 = document.querySelectorAll("#object>h1, h2")
 let myElements = Array.from(exo1H1)
 console.log(myElements);
 // ### 2. Trouve une méthode pour créer un tableau des propriétés de ton objet
-// let arr = Object.getOwnPropertyNames(myObject)
-// console.log(arr);
+let arr = Object.getOwnPropertyNames(myObject)
+console.log(arr);
 
 // ### 3. Créer une boucle qui va parcourir toutes les propriétés contenu dans ton object et qui pour chacune d'elle fait un console.log de la propriétéµ
 let i = 0
