@@ -9,32 +9,30 @@
 // ### 4. Récupère les li dont la class est important avec querySelectorAll et affiche le résultat dans la console
 // ### 5. Affiche avec l'aide d'un foreach le contenu de chaque li avec la dernière lettre en majuscule 
 // ### 6. Récupère le p dont la class est "grandParagraphe" de la div id "content", tu dois ici utiliser un getElementById et un getElementsByClassName
+// 1
+let exo1 = document.querySelector("#content")
+console.log(exo1)
+// 2
+let exo2 = document.querySelectorAll("#content")
+console.log(exo2)
 
+// 3
+let exo3 = document.querySelector(".important")
+console.log(exo3);
+// 4
+let exo4 = document.querySelectorAll(".important")
+console.log(exo4);
 
+// 5
+let li = document.querySelectorAll("li")
 
-let content = document.querySelector('#content')
-
-console.log(content);
-
-let content2 = document.querySelectorAll('#content')
-console.log(content2);
-let important = document.querySelector('.important')
-let important2 = document.querySelectorAll('.important')
-console.log(important);
-console.log(important2);
-
-
-let tb = Array.from(important2)
-
-tb.forEach(element => {
-
-    console.log(element.textContent.substring(0,element.textContent.length -1) + element.textContent.substring(element.textContent.length -1).toUpperCase());
-
+li.forEach(element => {
+    console.log(element.innerText.substring(0, element.innerText.length - 1) + element.innerText[element.innerText.length - 1].toUpperCase());
 });
 
-let problemee = document.getElementById('content')
+// 6
+let para = document.getElementsByClassName("grandParagraphe")
+console.log(para);
 
-let jsp =problemee.getElementsByClassName('grandParagraphe')
-
-
-console.log(jsp[0]);
+let cont = document.getElementById("content")
+console.log(cont);
