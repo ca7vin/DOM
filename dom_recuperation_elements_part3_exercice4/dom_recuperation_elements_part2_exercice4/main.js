@@ -23,9 +23,20 @@ elements = Array.from(elements)
 
 let i = 0
 for (const elem in competences) {
-    if (Object.hasOwnProperty.call(competences, elem)) {
         elements[i].innerText = (`${elem} : ${competences[elem]}`)
-    }
+        let percInNumb = Number(competences[elem].replace("%", ""))
+        if (percInNumb < 50) {
+            elements[i].setAttribute("style", "background-color: red");
+        }
+        if (percInNumb > 50) {
+            elements[i].setAttribute("style", "background-color: green; color: white")
+        }
+        if (percInNumb == 50) {
+            elements[i].setAttribute("style", "background-color: none")
+        }
+        if (percInNumb == 100) {
+            elements[i].setAttribute("style", "background-color: gold; color: black")
+        }
     i++
 }
 // ### 3. Change le style des h2 selons certaines conditions :
