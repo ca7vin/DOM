@@ -1,0 +1,21 @@
+.text-blue{
+    color: blue;
+}
+.text-error{
+    color: white;
+    background-color: red;
+}
+
+.text-style{
+    background-color: blue;
+    color: gold;
+}
+
+.bolder{
+    font-weight: bold;
+}
+
+.bolder-red{
+    font-weight: bold;
+    color: red;
+}

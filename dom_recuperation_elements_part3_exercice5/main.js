@@ -25,7 +25,7 @@ let i = 1
 let j = 0
 for (const key in softSkills) {
         const element = softSkills[key];
-        elements[i].innerText = (`${key} : ${element}`)
+        elements[i].innerText += " " + element
         let percInNumb = Number(softSkills[key].replace("%", ""))
         if (percInNumb < 50) {
             elements[i].setAttribute("style", "background-color: red")

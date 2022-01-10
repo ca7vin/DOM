@@ -20,11 +20,32 @@ console.log(elements);
 // - Utilise une boucle "for in" pour parcourir ton objet
 elements = Array.from(elements)
 
+// AVEC INNER TEXT
+// let i = 0
+// for (const key in competences) {
+//         elements[i].innerText += " " + competences[key]
+//         let percInNumb = Number(competences[key].replace("%", ""))
+//         if (percInNumb < 50) {
+//             elements[i].setAttribute("style", "background-color: red");
+//         }
+//         if (percInNumb > 50) {
+//             elements[i].setAttribute("style", "background-color: green; color: white")
+//         }
+//         if (percInNumb == 50) {
+//             elements[i].setAttribute("style", "background-color: none")
+//         }
+//         if (percInNumb == 100) {
+//             elements[i].setAttribute("style", "background-color: gold; color: black")
+//         }
+//     i++
+// }
 
-let i = 0
-for (const elem in competences) {
-        elements[i].innerText = (`${elem} : ${competences[elem]}`)
-        let percInNumb = Number(competences[elem].replace("%", ""))
+// AVEC TEXT NODE ET APPEND CHILD
+let i = 0;
+for (const key in competences) {
+    let perc = document.createTextNode(" " + competences[key])
+    elements[i].appendChild(perc)
+    let percInNumb = Number(competences[key].replace("%", ""))
         if (percInNumb < 50) {
             elements[i].setAttribute("style", "background-color: red");
         }
@@ -32,13 +53,15 @@ for (const elem in competences) {
             elements[i].setAttribute("style", "background-color: green; color: white")
         }
         if (percInNumb == 50) {
-            elements[i].setAttribute("style", "background-color: none")
+            elements[i].style.backgroundColor = "white";
         }
         if (percInNumb == 100) {
-            elements[i].setAttribute("style", "background-color: gold; color: black")
+            elements[i].style.backgroundColor = "Gold"
+            elements[i].style.color = "black"
         }
     i++
 }
+
 // ### 3. Change le style des h2 selons certaines conditions :
 // - Si le pourcentage est inférieur à 50 alors le h2 a un background rouge
 // - Si le pourcentage est supérieur à 50 alors le background est vert et l'écriture blanche
