@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/admin-lte/dist/css/AdminLTE.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container  mt-4">
+        <div class="callout callout-info">
+            <h4>Le DOM - Les écouteurs d'évenements</h4>
+
+        </div>
+        <div class="box box-primary ">
+            <div class="box-header with-border">
+                <h3 class="box-title">Exercice 01 - focus</h3>
+            </div>
+            <div class="box-body">
+                <ul>
+                    <li>Récupérer l'input avec
+                        <b>getElementsByTagName();</b> et le stocker dans une variable</li>
+                    <li>Créer un écouteur d'événement avec comme déclencheur
+                        <b>focus </b>qui au focus de l'input met le fond en bleu</li>
+                </ul>
+                <input type="text">
+            </div>
+
+        </div>
+        <div class="box box-primary ">
+            <div class="box-header with-border">
+                <h3 class="box-title">Exercice 02 - "focus" la suite </h3>
+            </div>
+            <div class="box-body">
+                <ul>
+                    <li>Récupérer l'input avec
+                        <b>getElementsByTagName();</b> et le stocker dans une variable</li>
+                    <li>Créer un écouteur d'événement avec comme déclencheur
+                        <b>focus </b>qui au focus de l'input met le fond en bleu.
+                    </li>
+                    <li>
+                        Créer un écouteur d'événement avec comme déclencheur
+                        <b>focusout</b> qui a la sortie du focus le background n'est plus bleu
+                    </li>
+                </ul>
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="box box-primary ">
+            <div class="box-header with-border">
+                <h3 class="box-title">Exercice 03 - Copier</h3>
+            </div>
+            <div class="box-body">
+                <ul>
+                    <li>Récupérer les trois paragraphe ainsi que le button avec
+                        <b> getElementsByClassName();</b> et les stocker dans des variables</li>
+                    <li>Copie le contenu du secondParagraphe dans les deux autres</li>
+                </ul>
+                <p class="premierParagraphe">A remplacer</p>
+                <p class="secondParagraphe">Mmm les tartines c'est délicieux</p>
+                <p class="dernierParagraphe">A remplacer</p>
+                <button class="buttonExo btn btn-primary">Click me</button>
+            </div>
+
+        </div>
+
+        <div class="box box-primary ">
+            <div class="box-header with-border">
+                <h3 class="box-title">Exercice 04 - Renommer</h3>
+            </div>
+            <div class="box-body">
+                <ul>
+                    <li>Créer un programme qui permet de renommer</li>
+                </ul>
+                <p id="exo4">Nicolas</p>
+                <div class="row mb-4">
+                    <div class="col-3">
+                        <input type="text" class="form-control input-sm">
+                    </div>
+                </div>
+                <button class="buttonExo2 btn btn-primary">Rename</button>
+            </div>
+
+        </div>
+        <div class="box box-primary ">
+            <div class="box-header with-border">
+                <h3 class="box-title">Exercice 05 - L'image </h3>
+            </div>
+            <div class="box-body">
+                <ul>
+                    <li>
+                    Au clique du bouton valider, cela copie le chemin et le met dans l'attribut src de l'img
+                    </li>
+                </ul>
+                <p>Chemin : ./src/image/tartine.png</p>
+                <img class="img-responsive" src="" alt="Photo">
+                <button class="btn btn-primary mb-2">
+                    <i class="fas fa-check"></i>
+                </button>
+            </div>
+
+        </div>
+        <div class="box box-primary ">
+            <div class="box-header with-border">
+                <h3 class="box-title">Exercice 06 - Tartinashi la tartine voleuse</h3>
+            </div>
+            <div class="box-body">
+                <ul>
+                    <li>Quand on clique sur la tartine, on récupère le chemin qui est stocké</li>
+                    <li>Quand on clique sur la Photo2 le chemin stocké y est ajouté</li>
+                </ul>
+                <img class="img-responsive" src="./src/image/tartine.png" alt="Photo">
+                <img class="img-responsive" src="" alt="Photo2">
+            </div>
+
+        </div>
+        <div class="box box-primary ">
+            <div class="box-header with-border">
+                <h3 class="box-title">Exercice 07</h3>
+            </div>
+            <div class="box-body">
+                <ul>
+                    <li>Interchange les deux textes au clique du button fléchés</li>
+                </ul>
+                <p id="text1">Texte 01</p>
+                <button class="btn btn-primary mb-2">
+                    <i class="fas fa-exchange-alt fa-rotate-90 "></i>
+                </button>
+                <p id="text2">Texte 02</p>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="./public/js/main.js"></script>
+</body>
+
+</html>
