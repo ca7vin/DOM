@@ -1,8 +1,8 @@
 let softSkills = {
     Trello: '49%',
     Git: '87%',
-    GitHub : '50%',
-    Discord: '15%',
+    GitHub: '50%',
+    Discord: '100%',
 }
 
 // # Exercice d'observation :
@@ -15,37 +15,83 @@ let softSkills = {
 // ### 1. Stock tous les h2 dans une variable du nom de 'elements', attention voici les contraintes :
 // - Tu dois utiliser un querySelectorAll
 // - Tu dois ciblé la div et plus précicément son id "liste-soft-skills"
-elements = document.querySelectorAll("#liste-soft-skills > h2")
-console.log(elements);
+
+
+
+
+
+
+
+// elements = document.querySelectorAll("#liste-soft-skills > h2")
+// console.log(elements);
 
 
 // ### 2. Insert dans les bons H2 les pourcentages de ton objet, voici les contraintes :
 // - Utilise une boucle "for in" pour parcourir ton objet
-let i = 1
-let j = 0
+let titres = document.querySelectorAll("#liste-soft-skills > h2")
+console.log(titres);
+
+
 for (const key in softSkills) {
-        const element = softSkills[key];
-        elements[i].innerText += " " + element
-        let percInNumb = Number(softSkills[key].replace("%", ""))
-        if (percInNumb < 50) {
-            elements[i].setAttribute("style", "background-color: red")
-        }if (percInNumb > 50) {
-            elements[i].setAttribute("style", "background-color: green; color: white")
+    titres.forEach(element => {
+        if (element.textContent === key) {
+            element.innerText += " : " + softSkills[key];
+            let percInNumb = Number(softSkills[key].replace("%", ""))
+            if (percInNumb < 50) {
+                element.style.backgroundColor = "red"
+            }
+            if (percInNumb > 50) {
+                element.style.backgroundColor = "green"
+            }
+            if (percInNumb === 50) {
+                element.style.backgroundColor = "none"
+            }
+            if (percInNumb === 100) {
+                element.style.backgroundColor = "gold"
+                element.style.color = "black"
+            }
         }
-        if (percInNumb == 50) {
-            elements[i].setAttribute("style", "background-color: none")
-        }
-        if (percInNumb == 100) {
-            elements[i].setAttribute("style", "background-color: gold; color: black")
-        }
-        i++;
-        j++;
-        if (j === 2) {
-            i = 0;
-        } else if (j === 3) {
-            i = 3
-        }
-    }
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let i = 1
+// let j = 0
+// for (const key in softSkills) {
+//         const element = softSkills[key];
+//         elements[i].innerText += " " + element
+        // let percInNumb = Number(softSkills[key].replace("%", ""))
+        // if (percInNumb < 50) {
+        //     elements[i].setAttribute("style", "background-color: red")
+        // }if (percInNumb > 50) {
+        //     elements[i].setAttribute("style", "background-color: green; color: white")
+        // }
+        // if (percInNumb == 50) {
+        //     elements[i].setAttribute("style", "background-color: none")
+        // }
+        // if (percInNumb == 100) {
+        //     elements[i].setAttribute("style", "background-color: gold; color: black")
+        // }
+//         i++;
+//         j++;
+//         if (j === 2) {
+//             i = 0;
+//         } else if (j === 3) {
+//             i = 3
+//         }
+//     }
 
 // ### 3. Change le style des h2 selons certaines conditions :
 // - Si le pourcentage est inférieur à 50 alors le h2 a un background rouge
