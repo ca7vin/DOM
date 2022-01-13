@@ -55,3 +55,39 @@ btnGo.addEventListener("click", () => {
             break
     }
 })
+
+
+// CORRECTION
+// // Pour l'exercice 2
+// let pContent = "Il est possible de passer des parametres dans la function utilisé dans l'écouteur d'événement !"
+
+// // 1
+// let elementsContent = document.querySelector("#content").children
+// elementsContent = [...elementsContent]
+
+// elementsContent.forEach(element => {
+//     element.addEventListener("click", () => {
+//         console.log(element);
+//     })
+// })
+
+
+// // 2
+
+// elementsContent.forEach(element => {
+//     element.addEventListener("dblclick", () => {
+//         element.innerText = element.textContent.substring(0, 1).toUpperCase() + element.innerText.substring(1);
+//     })
+// })
+
+
+// // 3
+
+// let styles = ["border: 1px solid gold", "background-color: blue", "background-color: red", "border: 5px dotted gold"]
+
+// document.querySelector("input").addEventListener("click", () => {
+//     let random = Math.floor(Math.random() * styles.length)
+//     elementsContent.forEach(element => {
+//         element.setAttribute("style", styles[random])
+//     });
+// })
